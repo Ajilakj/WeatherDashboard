@@ -1,0 +1,39 @@
+:root{
+     --darkBlue:#050533;
+     --lightBlue:#4d4dd2;
+     --textColor:#333;
+}
+body{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+     font-size:30px;
+}
+h2{
+     font-size:25px;
+}
+header,footer{
+     background-color: var(--darkBlue);
+     color: whitesmoke;
+     text-align: center;
+}
+header{
+     height:75px;
+}
+footer{
+     height:50px;
+}
+main{
+     display: flex;
+}
+aside{
+     width: 30%;
+}
+section{
+     display: flex;
+     flex-direction: column;
+     width: 70%;
+}
+#city-details{
+     border: 1px solid var(--darkBlue);
+}
