@@ -1,7 +1,7 @@
 # WeatherDashboard
 
 ![](./Assets/img/screenshot.png)
-[To visit my weather dashboard Web Site]( https://ajilakj.github.io/weatherDashboard/)
+[To visit my weather dashboard Web Site]( https://ajilakj.github.io/WeatherDashboard/)
 
 ## Description
 It is a website to help get current and next 5 days weather information when user enter a city name
