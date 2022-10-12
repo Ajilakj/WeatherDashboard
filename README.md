@@ -1,6 +1,6 @@
 # WeatherDashboard
 
-![](./assets/img/screenshot.png)
+![](./Assets/img/screenshot.png)
 [To visit my weather dashboard Web Site]( https://ajilakj.github.io/weatherDashboard/)
 
 ## Description
