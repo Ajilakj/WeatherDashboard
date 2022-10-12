@@ -17,22 +17,32 @@ header,footer{
      color: whitesmoke;
      text-align: center;
 }
+header,footer *{
+     padding: 10px;
+     margin:5px;
+}
 header{
      height:75px;
 }
 footer{
-     height:50px;
+     height:25px;
 }
 main{
      display: flex;
 }
 aside{
-     width: 30%;
+     width: 20%;
+}
+aside *{
+     margin:10px;
 }
 section{
      display: flex;
      flex-direction: column;
      width: 70%;
+}
+#city-details *{
+     margin-left:5px
 }
 #searchBtn{
      background-color: var(--darkBlue);
@@ -43,9 +53,11 @@ section{
 }
 #forcast{
      display: flex;
-     
 }
 .card{
-     margin:5px;
-     background-color: var(--lightBlue);
+     margin:10px;
+     width: 20%;
+     background-color: var(--darkBlue);
+     color: beige;
+     font-size: small;
 }
