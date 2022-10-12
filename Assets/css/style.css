@@ -34,6 +34,10 @@ section{
      flex-direction: column;
      width: 70%;
 }
+#searchBtn{
+     background-color: var(--darkBlue);
+     color: antiquewhite;
+}
 #city-details{
      border: 1px solid var(--darkBlue);
 }
