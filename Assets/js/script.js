@@ -3,7 +3,7 @@ var ApiKey="fb63e6c2bdd7b63a68498ad2e6e8dcb8";
 var previousCity=[];
 var city;
 var searchCity;
-var previous;
+var previous=[];
 var latitude;
 var longitude;
 var queryURL;
@@ -11,25 +11,19 @@ var queryUrlFive;
 var searchBtn=document.getElementById("searchBtn");
 
 
-//to get the previous search history
-// previous=localStorage.getItem("City");
-// var previousSearch=document.getElementById("previous-search");
-// previousSearch.textContent=previous;
-// var btnList = $('<p>');
-// btnList.textContent=previous;
-// previousSearch.appendChild(btnList);
 
 
 //to get city name from user  
 searchBtn.addEventListener("click", function(){
      searchCity=document.getElementById("search").value;
-     cityWeather(searchCity);    
-    
+     previousCity.push(searchCity);
+     localStorage.setItem("previousCity",previousCity);
      // to create buttons and append
      var buttonTag = document.createElement("button");
      const textForBtn = document.createTextNode(searchCity);
      buttonTag.appendChild(textForBtn);
      document.getElementById("button").appendChild(buttonTag);
+     cityWeather(searchCity);   
 });
 
 
