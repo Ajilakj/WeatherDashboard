@@ -1,6 +1,8 @@
 //variables
 var ApiKey="fb63e6c2bdd7b63a68498ad2e6e8dcb8";
+var previousCity=[];
 var city;
+var searchCity;
 var previous;
 var latitude;
 var longitude;
@@ -10,9 +12,9 @@ var searchBtn=document.getElementById("searchBtn");
 
 
 //to get the previous search history
-previous=localStorage.getItem("City");
-var previousSearch=document.getElementById("previous-search");
-previousSearch.textContent=previous;
+// previous=localStorage.getItem("City");
+// var previousSearch=document.getElementById("previous-search");
+// previousSearch.textContent=previous;
 // var btnList = $('<p>');
 // btnList.textContent=previous;
 // previousSearch.appendChild(btnList);
@@ -20,11 +22,12 @@ previousSearch.textContent=previous;
 
 //to get city name from user  
 searchBtn.addEventListener("click", function(){
-     city=document.getElementById("search").value;
-     document.getElementById("city").textContent=city;
+     searchCity=document.getElementById("search").value;
+     document.getElementById("city").textContent=searchCity;
      //to store the search city name to local storage
-     localStorage.setItem("City",city);
-     queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + ApiKey;
+     previousCity.push(searchCity);
+     localStorage.setItem("previousCity",previousCity);
+     queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "&units=imperial&appid=" + ApiKey;
 
      //to get data for a particular city
      fetch(queryURL)
@@ -64,9 +67,14 @@ searchBtn.addEventListener("click", function(){
                document.getElementById("humidity"+c).textContent=dataSet.list[i].main.humidity+" %";
                c++;
           }
+
+          // to create buttons and append
+          var buttonTag = document.createElement("button");
+          const textForBtn = document.createTextNode(searchCity);
+          buttonTag.appendChild(textForBtn);
+          document.getElementById("button").appendChild(buttonTag);
+
      });
      });
 });
 
-
-     

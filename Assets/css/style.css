@@ -2,6 +2,7 @@
      --darkBlue:#050533;
      --lightBlue:#4d4dd2;
      --textColor:#333;
+     --textColorLight:whitesmoke;
 }
 body{
      font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -14,7 +15,7 @@ h2{
 }
 header,footer{
      background-color: var(--darkBlue);
-     color: whitesmoke;
+     color: var(--textColorLight);
      text-align: center;
 }
 header,footer *{
@@ -60,4 +61,10 @@ section{
      background-color: var(--darkBlue);
      color: beige;
      font-size: small;
+}
+#button *{
+     width:15vw;
+     padding:10px;
+     /* background-color: var(--darkBlue);
+     color:var(--textColorLight); */
 }
